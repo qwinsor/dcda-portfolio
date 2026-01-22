@@ -11,8 +11,8 @@
     --secondary-color: #001694;    /* dark blue */
     --accent-color: #ff0000;       /* Gold accent */
     --text-color: #333;            /* Dark gray for text */
-    --text-secondary: #64748b;     /* Lighter gray for captions */
-    --bg-color: #f4f4f4;           /* Light background */
+    --text-secondary: #253cd3;     /* Lighter gray for captions */
+    --bg-color: #ffffff;           /* Light background */
     --white: #ffffff;
 }
 
@@ -30,7 +30,7 @@ html {
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--bg-color);
