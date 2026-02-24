@@ -417,4 +417,77 @@ footer a:hover {
         box-shadow: none;
         page-break-inside: avoid;
     }
+}/* ========================= Lab 05 Enhancements: Dark Mode, Search/Tags, Back-to-Top ========================= */
+
+.nav-btn {
+    margin-left: 0.75rem;
+    border: 1px solid rgba(255,255,255,0.35);
+    background: rgba(255,255,255,0.12);
+    color: white;
+    padding: 0.45rem 0.75rem;
+    border-radius: 8px;
+    cursor: pointer;
 }
+.nav-btn:hover { background: rgba(255,255,255,0.2); }
+
+/* Search + tags layout */
+.lab-controls { margin: 1rem 0 1.25rem; display: grid; gap: 0.75rem; }
+.lab-search {
+    width: 100%;
+    padding: 0.8rem 0.9rem;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    font-size: 1rem;
+}
+.tag-filters { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.tag-btn {
+    border: 1px solid #e2e8f0;
+    background: white;
+    padding: 0.4rem 0.7rem;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+.tag-btn.is-active {
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 10px rgba(77, 25, 121, 0.12);
+}
+.results-count { color: var(--text-secondary); margin: 0; }
+
+/* Back to top */
+.back-to-top {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    padding: 0.6rem 0.75rem;
+    border-radius: 999px;
+    border: 1px solid #e2e8f0;
+    background: white;
+    cursor: pointer;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 999;
+}
+.back-to-top.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+/* ---------- Dark mode (class toggled on <html>) ---------- */
+html.dark {
+    --bg-color: #0f1220;
+    --text-color: #e8e9f0;
+    --text-secondary: #b8bbd3;
+}
+
+html.dark body { background: var(--bg-color); color: var(--text-color); }
+html.dark main section { background: #141a2d; }
+html.dark .portfolio-card { background: #141a2d; border-color: rgba(255,255,255,0.12); }
+html.dark .tag-btn { background: #141a2d; border-color: rgba(255,255,255,0.12); color: var(--text-color); }
+html.dark .lab-search { background: #141a2d; border-color: rgba(255,255,255,0.12); color: var(--text-color); }
+html.dark .back-to-top { background: #141a2d; border-color: rgba(255,255,255,0.12); color: var(--text-color); }
+

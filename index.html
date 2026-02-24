@@ -19,6 +19,10 @@
             <li><a href="lab5.html">Lab 5</a></li>
             <li><a href="hometown-map.html">Hometown Map</a></li>
         </ul>
+        <!-- dark mode toggle button below. -->
+        <button id="themeToggle" class="nav-btn" type="button" aria-label="Toggle dark mode">
+    Dark
+</button>
     </nav>
 <!-- I want to figure out how to make the background a subtle pattern.-->
     <!-- Header: Your name and course info -->
@@ -58,40 +62,61 @@
         <section id="portfolio">
             <h2>My Work</h2>
             <p>Click on any card below to view that lab assignment. Focus of actual labs may change over the course of the semester:</p>
+            <!-- below is the code for the keyword search.-->
+<div class="lab-controls" aria-label="Lab filters">
+    <input
+        id="labSearch"
+        class="lab-search"
+        type="search"
+        placeholder="Search labs (ex: AI, Tableau, Map)…"
+        autocomplete="off"
+    />
 
+    <div id="tagFilters" class="tag-filters" role="group" aria-label="Tag filters">
+        <button class="tag-btn is-active" type="button" data-tag="all">All</button>
+        <button class="tag-btn" type="button" data-tag="ai">AI</button>
+        <button class="tag-btn" type="button" data-tag="viz">Viz</button>
+        <button class="tag-btn" type="button" data-tag="tableau">Tableau</button>
+        <button class="tag-btn" type="button" data-tag="writing">Writing</button>
+        <button class="tag-btn" type="button" data-tag="gis">GIS/Map</button>
+    </div>
+
+    <p id="resultsCount" class="results-count" aria-live="polite"></p>
+</div>
             <!-- Portfolio Grid: Cards linking to each lab page -->
             <div class="portfolio-grid">
+                <!-- for each title and href i added in a dog tag for easy searching-->
 
                 <!-- Lab 2: AI Tool Evaluation -->
-                <a href="ai-evaluation.html" class="portfolio-card">
+                <a href="ai-evaluation.html" class="portfolio-card" data-tags="ai writing">
                     <h3>AI Tool Evaluation</h3>
                     <span class="lab-tag">Lab 2</span>
                     <p>Analysis of AI tools and their capabilities, exploring how artificial intelligence is changing digital culture.</p>
                 </a>
 
                 <!-- Lab 3: Tufte Critique -->
-                <a href="Lab03.html" class="portfolio-card">
+                <a href="Lab03.html" class="portfolio-card" data-tags="viz writing">
                     <h3>Tufte Critique</h3>
                     <span class="lab-tag">Lab 3</span>
                     <p>Critical analysis of a data visualization using Edward Tufte's principles of graphical excellence.</p>
                 </a>
 
                 <!-- Lab 4: Tableau Visualization -->
-                <a href="tableau-visualization.html" class="portfolio-card">
+                <a href="tableau-visualization.html" class="portfolio-card" data-tags="viz tableau">
                     <h3>Tableau Visualization</h3>
                     <span class="lab-tag">Lab 4</span>
                     <p>Interactive data visualization created with Tableau Public, exploring patterns in real-world data.</p>
                 </a>
 
                 <!-- Lab 5: TBD -->
-                <a href="lab5.html" class="portfolio-card">
+                <a href="lab5.html" class="portfolio-card" data-tags="ai">
                     <h3>Lab 5</h3>
                     <span class="lab-tag">Lab 5</span>
                     <p>Content based on Lab 5 assignment.</p>
                 </a>
 
                 <!-- Lab 6: Hometown Map -->
-                <a href="hometown-map.html" class="portfolio-card">
+                <a href="hometown-map.html" class="portfolio-card" data-tags="gis">
                     <h3>Hometown Map</h3>
                     <span class="lab-tag">Lab 6</span>
                     <p>Interactive Folium map showcasing meaningful locations from my hometown with personal reflections.</p>
@@ -117,5 +142,11 @@
         <p><a href="https://qwinsor.github.io/dcda-portfolio/">View Repository on GitHub</a></p>
         <p>&copy; 2026 Quinn Winsor | DCDA 40833 | TCU</p>
     </footer>
+    <!-- here is the code for my "Back to top button"-->
+    <button id="backToTop" class="back-to-top" type="button" aria-label="Back to top">
+    ↑ Top
+</button>
+
+<script src="js/site.js"></script>
 </body>
 </html>
