@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lab 06 | Hometown Map</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="lab02.html">Lab 2: AI Evaluation</a>
+      <a href="Lab03.html">Lab 3: Visualization Critique</a>
+      <a href="Lab04.html">Lab 4: Tableau viz</a>
+      <a href="lab05.html">Lab 5: Portfolio Edits</a>
+      <a href="Lab06.html" class="active">Lab 6: Hometown Map</a>
+    </nav>
+    <h1>Lab 06: Chicago Hometown Map</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Interactive Map</h2>
+      <p>
+        If the map doesn’t load inside the page, open it here:
+        <a href="Lab06/chicago_map.html" target="_blank" rel="noopener">open in a new tab</a>
+      </p>
+
+      <iframe src="Lab06/chicago_map.html" width="100%" height="650" style="border:0;" loading="lazy"></iframe>
+    </section>
+
+    <section>
+      <h2>Reflection</h2>
+      <p>
+        I built a Chicago “hometown map” for Lab 06 using Python, Mapbox, and Folium, and I leaned into a Batman/Gotham vibe for the whole thing. My goal was to make the basemap feel like night-time Chicago, so I went with mostly black and foggy gray, with some white for readability and a little yellow-ish accent for that Bat-signal feel. In Mapbox Studio I started from a blank style and kept adjusting layers until it looked clean at different zoom levels, especially roads and labels so it didn’t turn into a messy blob when you zoomed out. Then I connected that custom Mapbox style to my Folium map by turning the style URL into a tiles URL.
+      </p>
+      <p>
+        The hardest part honestly was just getting everything to talk to each other in the right folder. At first my script kept failing because it couldn’t find my CSV, which was annoying until I realized the terminal was running from the wrong directory. I also messed up my Mapbox token once and got a 401 error, so I had to re-export it correctly and rerun the script. After that, the geocoding worked and my 10 locations dropped onto the map with popups, and exporting the HTML made it easy to plug into my GitHub portfolio.
+      </p>
+    </section>
+  </main>
+
+</body>
+</html>
