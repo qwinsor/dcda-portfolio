@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c0c6e8f7f7bd57439f5e9764257558fa {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_c0c6e8f7f7bd57439f5e9764257558fa" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_c0c6e8f7f7bd57439f5e9764257558fa = L.map(
+                "map_c0c6e8f7f7bd57439f5e9764257558fa",
+                {
+                    center: [41.8781, -87.6298],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_c0c6e8f7f7bd57439f5e9764257558fa);
+
+            
+
+        
+    
+            var tile_layer_2155191700a9b1271f407ea9f8ffbf8a = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_2155191700a9b1271f407ea9f8ffbf8a.addTo(map_c0c6e8f7f7bd57439f5e9764257558fa);
+        
+    
+            var tile_layer_3f29d818fd0c7536d85093aab05fb98f = L.tileLayer(
+                "https://api.mapbox.com/styles/v1/qwinsor/cmm3wsyxj001i01scgx0w4dvo/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicXdpbnNvciIsImEiOiJjbTF6bHY0ZmgwOTJnMm5weGdjNzA3eWtlIn0.p9gfwOx_G9mxyZeg92Rv0g",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Mapbox",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+  "tileSize": 256,
+  "zoomOffset": 0,
+}
+
+            );
+        
+    
+            tile_layer_3f29d818fd0c7536d85093aab05fb98f.addTo(map_c0c6e8f7f7bd57439f5e9764257558fa);
+        
+    
+            var marker_7f1a68104e1aa12c39c85a084186e166 = L.marker(
+                [41.895974, -87.684249],
+                {
+}
+            ).addTo(map_c0c6e8f7f7bd57439f5e9764257558fa);
+        
+    
+            var icon_5e8241d273ade072f161eebf86b4d4c8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0af0d2a2f284f9644da8900d4d4f8f76 = L.popup({
+  "maxWidth": 330,
+});
+
+        
+            
+                var html_a95fb0236887d180451d8daab4e612b6 = $(`<div id="html_a95fb0236887d180451d8daab4e612b6" style="width: 100.0%; height: 100.0%;"><div style="background:#111; color:#f2f2f2; padding:10px; border-radius:12px; width:290px; border:1px solid #333;">   <div style="font-size:16px; font-weight:800; margin-bottom:6px;">Fatso's Last Stand (Ukrainian Village)</div>   <div style="font-size:13px; line-height:1.35; color:#e6e6e6;">My go-to stop in the city when I want something casual that still feels very Chicago. It’s the kind of place I’d bring someone to if they wanted a real neighborhood vibe.</div>    </div></div>`)[0];
+                popup_0af0d2a2f284f9644da8900d4d4f8f76.setContent(html_a95fb0236887d180451d8daab4e612b6);
+            
+        
+
+        marker_7f1a68104e1aa12c39c85a084186e166.bindPopup(popup_0af0d2a2f284f9644da8900d4d4f8f76)
+        ;
+
+        
+    
+    
+            marker_7f1a68104e1aa12c39c85a084186e166.bindTooltip(
+                `<div>
+                     Fatso's Last Stand (Ukrainian Village)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7f1a68104e1aa12c39c85a084186e166.setIcon(icon_5e8241d273ade072f161eebf86b4d4c8);
+            
+    
+            var marker_b37a7e8f1ee7fb9bb757eb353a29dcf5 = L.marker(
+                [41.881352, -87.690728],
+                {
+}
+            ).addTo(map_c0c6e8f7f7bd57439f5e9764257558fa);
+        
+    
+            var icon_95799c31f92ed64d35853124b9ef7f76 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_eda61f51477b2b3b8819cae2d6bee509 = L.popup({
+  "maxWidth": 330,
+});
+
+        
+            
+                var html_a407e7cf493c2d13f6c41f4ec42cae25 = $(`<div id="html_a407e7cf493c2d13f6c41f4ec42cae25" style="width: 100.0%; height: 100.0%;"><div style="background:#111; color:#f2f2f2; padding:10px; border-radius:12px; width:290px; border:1px solid #333;">   <div style="font-size:16px; font-weight:800; margin-bottom:6px;">Johnny's IceHouse West</div>   <div style="font-size:13px; line-height:1.35; color:#e6e6e6;">This place is pure Chicago sports energy and it always feels busy in the best way. If someone’s visiting and wants to feel the hockey culture here, this is an easy pick.</div>    </div></div>`)[0];
+                popup_eda61f51477b2b3b8819cae2d6bee509.setContent(html_a407e7cf493c2d13f6c41f4ec42cae25);
+            
+        
+
+        marker_b37a7e8f1ee7fb9bb757eb353a29dcf5.bindPopup(popup_eda61f51477b2b3b8819cae2d6bee509)
+        ;
+
+        
+    
+    
+            marker_b37a7e8f1ee7fb9bb757eb353a29dcf5.bindTooltip(
+                `<div>
+                     Johnny's IceHouse West
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b37a7e8f1ee7fb9bb757eb353a29dcf5.setIcon(icon_95799c31f92ed64d35853124b9ef7f76);
+            
+    
+            var marker_28014712b0e1ee414d6581d046fe6316 = L.marker(
+                [41.977625, -87.653693],
+                {
+}
+            ).addTo(map_c0c6e8f7f7bd57439f5e9764257558fa);
+        
+    
+            var icon_6cc96b6bf7f2166aed9060d187405620 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_201153a4722a03540d7b4e84c2e9b9f4 = L.popup({
+  "maxWidth": 330,
+});
+
+        
+            
+                var html_3dd1f69227615e4ee168c3b129529ebe = $(`<div id="html_3dd1f69227615e4ee168c3b129529ebe" style="width: 100.0%; height: 100.0%;"><div style="background:#111; color:#f2f2f2; padding:10px; border-radius:12px; width:290px; border:1px solid #333;">   <div style="font-size:16px; font-weight:800; margin-bottom:6px;">Saddle & Cycle Club</div>   <div style="font-size:13px; line-height:1.35; color:#e6e6e6;">This spot feels classic Chicago and it’s tied to a very specific part of the city. It’s one of those places that makes you think about how old and layered Chicago really is.</div>    </div></div>`)[0];
+                popup_201153a4722a03540d7b4e84c2e9b9f4.setContent(html_3dd1f69227615e4ee168c3b129529ebe);
+            
+        
+
+        marker_28014712b0e1ee414d6581d046fe6316.bindPopup(popup_201153a4722a03540d7b4e84c2e9b9f4)
+        ;
+
+        
+    
+    
+            marker_28014712b0e1ee414d6581d046fe6316.bindTooltip(
+                `<div>
+                     Saddle & Cycle Club
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_28014712b0e1ee414d6581d046fe6316.setIcon(icon_6cc96b6bf7f2166aed9060d187405620);
+            
+    
+            var marker_188c0c5aadf1cb7fe3dd5229d015ebfa = L.marker(
+                [41.73096, -87.68484],
+                {
+}
+            ).addTo(map_c0c6e8f7f7bd57439f5e9764257558fa);
+        
+    
+            var icon_0287364df8e0a708ace1a9c28f356134 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e9555d5a674dd1627d0f986a5e15d1fd = L.popup({
+  "maxWidth": 330,
+});
+
+        
+            
+                var html_b45738e7fefa036851a2eb3b057b3b45 = $(`<div id="html_b45738e7fefa036851a2eb3b057b3b45" style="width: 100.0%; height: 100.0%;"><div style="background:#111; color:#f2f2f2; padding:10px; border-radius:12px; width:290px; border:1px solid #333;">   <div style="font-size:16px; font-weight:800; margin-bottom:6px;">Beverly Country Club</div>   <div style="font-size:13px; line-height:1.35; color:#e6e6e6;">Beverly has that old-school golf feel and it’s a big part of the South Side identity. It’s a place I associate with tradition and a quieter side of the city.</div>    </div></div>`)[0];
+                popup_e9555d5a674dd1627d0f986a5e15d1fd.setContent(html_b45738e7fefa036851a2eb3b057b3b45);
+            
+        
+
+        marker_188c0c5aadf1cb7fe3dd5229d015ebfa.bindPopup(popup_e9555d5a674dd1627d0f986a5e15d1fd)
+        ;
+
+        
+    
+    
+            marker_188c0c5aadf1cb7fe3dd5229d015ebfa.bindTooltip(
+                `<div>
+                     Beverly Country Club
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_188c0c5aadf1cb7fe3dd5229d015ebfa.setIcon(icon_0287364df8e0a708ace1a9c28f356134);
+            
+    
+            var marker_dc6d862f2581311f69c13b998674c56e = L.marker(
+                [41.788028, -87.593941],
+                {
+}
+            ).addTo(map_c0c6e8f7f7bd57439f5e9764257558fa);
+        
+    
+            var icon_d993f52c5a069be81c6cc43a29aabd86 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkpurple",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fac8e098f9540d1609481d42d64f180f = L.popup({
+  "maxWidth": 330,
+});
+
+        
+            
+                var html_9ff6d7f5b95d24550a9ad27e33ea32e6 = $(`<div id="html_9ff6d7f5b95d24550a9ad27e33ea32e6" style="width: 100.0%; height: 100.0%;"><div style="background:#111; color:#f2f2f2; padding:10px; border-radius:12px; width:290px; border:1px solid #333;">   <div style="font-size:16px; font-weight:800; margin-bottom:6px;">UChicago Lab Schools (Blaine Hall)</div>   <div style="font-size:13px; line-height:1.35; color:#e6e6e6;">This is a location that stands out to me because it’s connected to a serious academic environment and a unique part of Chicago. It feels like a landmark for learning, not just a building.</div>    </div></div>`)[0];
+                popup_fac8e098f9540d1609481d42d64f180f.setContent(html_9ff6d7f5b95d24550a9ad27e33ea32e6);
+            
+        
+
+        marker_dc6d862f2581311f69c13b998674c56e.bindPopup(popup_fac8e098f9540d1609481d42d64f180f)
+        ;
+
+        
+    
+    
+            marker_dc6d862f2581311f69c13b998674c56e.bindTooltip(
+                `<div>
+                     UChicago Lab Schools (Blaine Hall)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_dc6d862f2581311f69c13b998674c56e.setIcon(icon_d993f52c5a069be81c6cc43a29aabd86);
+            
+    
+            var marker_3d054e9885ca5f7cb5e30b755dcdd33b = L.marker(
+                [41.883315, -87.621887],
+                {
+}
+            ).addTo(map_c0c6e8f7f7bd57439f5e9764257558fa);
+        
+    
+            var icon_7382d32b7f4f369aa463328755817e20 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_67de2afa296823b71bd16324f7a5477a = L.popup({
+  "maxWidth": 330,
+});
+
+        
+            
+                var html_a22e51bab6b04f1ca2555583a4524bd8 = $(`<div id="html_a22e51bab6b04f1ca2555583a4524bd8" style="width: 100.0%; height: 100.0%;"><div style="background:#111; color:#f2f2f2; padding:10px; border-radius:12px; width:290px; border:1px solid #333;">   <div style="font-size:16px; font-weight:800; margin-bottom:6px;">Millennium Park</div>   <div style="font-size:13px; line-height:1.35; color:#e6e6e6;">This is the classic first stop because it instantly looks like Chicago in photos. Even if you’ve seen it online a million times, it hits different in person.</div>    </div></div>`)[0];
+                popup_67de2afa296823b71bd16324f7a5477a.setContent(html_a22e51bab6b04f1ca2555583a4524bd8);
+            
+        
+
+        marker_3d054e9885ca5f7cb5e30b755dcdd33b.bindPopup(popup_67de2afa296823b71bd16324f7a5477a)
+        ;
+
+        
+    
+    
+            marker_3d054e9885ca5f7cb5e30b755dcdd33b.bindTooltip(
+                `<div>
+                     Millennium Park
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3d054e9885ca5f7cb5e30b755dcdd33b.setIcon(icon_7382d32b7f4f369aa463328755817e20);
+            
+    
+            var marker_d30a7deab9185551831b7c02206377d0 = L.marker(
+                [41.879577, -87.623456],
+                {
+}
+            ).addTo(map_c0c6e8f7f7bd57439f5e9764257558fa);
+        
+    
+            var icon_7e8402f83ab7e104cfe25599f1660de2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3a9b9130928fc517c982ba59dac5b901 = L.popup({
+  "maxWidth": 330,
+});
+
+        
+            
+                var html_4b0095832ea0d3b2936cdfb98365acde = $(`<div id="html_4b0095832ea0d3b2936cdfb98365acde" style="width: 100.0%; height: 100.0%;"><div style="background:#111; color:#f2f2f2; padding:10px; border-radius:12px; width:290px; border:1px solid #333;">   <div style="font-size:16px; font-weight:800; margin-bottom:6px;">Art Institute of Chicago</div>   <div style="font-size:13px; line-height:1.35; color:#e6e6e6;">This is one of those places where you can spend way longer than you planned. It’s also a good ‘Chicago is a world city’ proof point when someone visits.</div>    </div></div>`)[0];
+                popup_3a9b9130928fc517c982ba59dac5b901.setContent(html_4b0095832ea0d3b2936cdfb98365acde);
+            
+        
+
+        marker_d30a7deab9185551831b7c02206377d0.bindPopup(popup_3a9b9130928fc517c982ba59dac5b901)
+        ;
+
+        
+    
+    
+            marker_d30a7deab9185551831b7c02206377d0.bindTooltip(
+                `<div>
+                     Art Institute of Chicago
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d30a7deab9185551831b7c02206377d0.setIcon(icon_7e8402f83ab7e104cfe25599f1660de2);
+            
+    
+            var marker_4137c54c6fd2735e8bbf5a81add88065 = L.marker(
+                [41.891864, -87.605011],
+                {
+}
+            ).addTo(map_c0c6e8f7f7bd57439f5e9764257558fa);
+        
+    
+            var icon_e1aaa6d7015ac17f8075d9e349cefc4b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e603842edd2805dc0bd17b18dbdd7148 = L.popup({
+  "maxWidth": 330,
+});
+
+        
+            
+                var html_c8b426191f670abbe37ddff792ff683d = $(`<div id="html_c8b426191f670abbe37ddff792ff683d" style="width: 100.0%; height: 100.0%;"><div style="background:#111; color:#f2f2f2; padding:10px; border-radius:12px; width:290px; border:1px solid #333;">   <div style="font-size:16px; font-weight:800; margin-bottom:6px;">Navy Pier</div>   <div style="font-size:13px; line-height:1.35; color:#e6e6e6;">Navy Pier is touristy, but it’s also a guaranteed win if you want views and people-watching. It’s an easy way to get someone excited about the lakefront.</div>    </div></div>`)[0];
+                popup_e603842edd2805dc0bd17b18dbdd7148.setContent(html_c8b426191f670abbe37ddff792ff683d);
+            
+        
+
+        marker_4137c54c6fd2735e8bbf5a81add88065.bindPopup(popup_e603842edd2805dc0bd17b18dbdd7148)
+        ;
+
+        
+    
+    
+            marker_4137c54c6fd2735e8bbf5a81add88065.bindTooltip(
+                `<div>
+                     Navy Pier
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4137c54c6fd2735e8bbf5a81add88065.setIcon(icon_e1aaa6d7015ac17f8075d9e349cefc4b);
+            
+    
+            var marker_90ed03811fddcf7392f06a50ec6d65bd = L.marker(
+                [41.886376, -87.71774],
+                {
+}
+            ).addTo(map_c0c6e8f7f7bd57439f5e9764257558fa);
+        
+    
+            var icon_c6b8c7c7bd607e7ab5e393d49ff624aa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_30aba2d2798703a0b371cca53a4b8c0a = L.popup({
+  "maxWidth": 330,
+});
+
+        
+            
+                var html_4a9b9f8c0cd36895a070955622de637d = $(`<div id="html_4a9b9f8c0cd36895a070955622de637d" style="width: 100.0%; height: 100.0%;"><div style="background:#111; color:#f2f2f2; padding:10px; border-radius:12px; width:290px; border:1px solid #333;">   <div style="font-size:16px; font-weight:800; margin-bottom:6px;">Garfield Park Conservatory</div>   <div style="font-size:13px; line-height:1.35; color:#e6e6e6;">This feels like a hidden gem because it’s such a strong change of scenery from the streets. It’s a great spot when you want something calm but still impressive.</div>    </div></div>`)[0];
+                popup_30aba2d2798703a0b371cca53a4b8c0a.setContent(html_4a9b9f8c0cd36895a070955622de637d);
+            
+        
+
+        marker_90ed03811fddcf7392f06a50ec6d65bd.bindPopup(popup_30aba2d2798703a0b371cca53a4b8c0a)
+        ;
+
+        
+    
+    
+            marker_90ed03811fddcf7392f06a50ec6d65bd.bindTooltip(
+                `<div>
+                     Garfield Park Conservatory
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_90ed03811fddcf7392f06a50ec6d65bd.setIcon(icon_c6b8c7c7bd607e7ab5e393d49ff624aa);
+            
+    
+            var marker_b4f4f99dd42ebe3bc9a5bab5e863a492 = L.marker(
+                [41.947547, -87.656294],
+                {
+}
+            ).addTo(map_c0c6e8f7f7bd57439f5e9764257558fa);
+        
+    
+            var icon_939ed5fd1b47c24ae81499255eb5a328 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6f9827b14cf04b4fb487739272b78492 = L.popup({
+  "maxWidth": 330,
+});
+
+        
+            
+                var html_dc3e7c66a91bc58eb678a77bc1d3afb4 = $(`<div id="html_dc3e7c66a91bc58eb678a77bc1d3afb4" style="width: 100.0%; height: 100.0%;"><div style="background:#111; color:#f2f2f2; padding:10px; border-radius:12px; width:290px; border:1px solid #333;">   <div style="font-size:16px; font-weight:800; margin-bottom:6px;">Wrigley Field</div>   <div style="font-size:13px; line-height:1.35; color:#e6e6e6;">Even if you don’t care about baseball, the area around Wrigley is a whole experience. It’s one of the easiest places to feel the city’s sports culture.</div>    </div></div>`)[0];
+                popup_6f9827b14cf04b4fb487739272b78492.setContent(html_dc3e7c66a91bc58eb678a77bc1d3afb4);
+            
+        
+
+        marker_b4f4f99dd42ebe3bc9a5bab5e863a492.bindPopup(popup_6f9827b14cf04b4fb487739272b78492)
+        ;
+
+        
+    
+    
+            marker_b4f4f99dd42ebe3bc9a5bab5e863a492.bindTooltip(
+                `<div>
+                     Wrigley Field
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b4f4f99dd42ebe3bc9a5bab5e863a492.setIcon(icon_939ed5fd1b47c24ae81499255eb5a328);
+            
+    
+            map_c0c6e8f7f7bd57439f5e9764257558fa.fitBounds(
+                [[41.895974, -87.684249], [41.881352, -87.690728], [41.977625, -87.653693], [41.73096, -87.68484], [41.788028, -87.593941], [41.883315, -87.621887], [41.879577, -87.623456], [41.891864, -87.605011], [41.886376, -87.71774], [41.947547, -87.656294]],
+                {"padding": [25, 25]}
+            );
+        
+    
+            var layer_control_952875afb999d49f65b536fb6776ac40_layers = {
+                base_layers : {
+                    "OSM (test)" : tile_layer_2155191700a9b1271f407ea9f8ffbf8a,
+                    "Gotham Chicago" : tile_layer_3f29d818fd0c7536d85093aab05fb98f,
+                },
+                overlays :  {
+                },
+            };
+            let layer_control_952875afb999d49f65b536fb6776ac40 = L.control.layers(
+                layer_control_952875afb999d49f65b536fb6776ac40_layers.base_layers,
+                layer_control_952875afb999d49f65b536fb6776ac40_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_c0c6e8f7f7bd57439f5e9764257558fa);
+
+        
+</script>
+</html>

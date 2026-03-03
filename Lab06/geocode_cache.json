@@ -1,0 +1,42 @@
+{
+  "2258 W Chicago Ave, Chicago, IL 60622": {
+    "lat": 41.895974,
+    "lon": -87.684249
+  },
+  "2550 W Madison St, Chicago, IL 60612": {
+    "lat": 41.881352,
+    "lon": -87.690728
+  },
+  "900 W Foster Ave, Chicago, IL 60640": {
+    "lat": 41.977625,
+    "lon": -87.653693
+  },
+  "8700 S Western Ave, Chicago, IL 60620": {
+    "lat": 41.73096,
+    "lon": -87.68484
+  },
+  "1362 E 59th St, Chicago, IL 60637": {
+    "lat": 41.788028,
+    "lon": -87.593941
+  },
+  "201 E Randolph St, Chicago, IL 60602": {
+    "lat": 41.883315,
+    "lon": -87.621887
+  },
+  "111 S Michigan Ave, Chicago, IL 60603": {
+    "lat": 41.879577,
+    "lon": -87.623456
+  },
+  "600 E Grand Ave, Chicago, IL 60611": {
+    "lat": 41.891864,
+    "lon": -87.605011
+  },
+  "300 N Central Park Ave, Chicago, IL 60624": {
+    "lat": 41.886376,
+    "lon": -87.71774
+  },
+  "1060 W Addison St, Chicago, IL 60613": {
+    "lat": 41.947547,
+    "lon": -87.656294
+  }
+}
